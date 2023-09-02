@@ -1,0 +1,14 @@
+Peliculas Favoritas:
+Crea un objeto usuario con propiedades como nombre y peliculasFavoritas, que es un array de objetos donde cada objeto representa una película con propiedades como titulo y año. Agrega al menos tres películas favoritas y muestra en la consola el título de la segunda película favorita.
+
+Gestor de Contactos:
+Crea un objeto contactos que almacene una lista de objetos, donde cada objeto represente un contacto con propiedades como nombre, telefono y email. Luego, agrega un nuevo contacto a la lista y muestra en la consola la cantidad total de contactos.
+
+Tienda en Línea:
+Crea un objeto producto con propiedades como nombre, precio y disponible. Luego, crea una función llamada mostrarProducto que tome un objeto producto como argumento y muestre en la consola toda la información del producto.
+
+Calificaciones de Estudiantes:
+Crea un objeto clase que contenga un array de objetos, donde cada objeto represente un estudiante con propiedades como nombre y calificaciones, que es un array de números. Agrega al menos tres estudiantes y muestra en la consola el promedio de calificaciones de cada estudiante.
+
+Red Social:
+Crea un objeto perfil que almacene propiedades como nombre, edad y amigos, que es un array de objetos donde cada objeto representa un amigo con propiedades como nombre y edad. Agrega al menos tres amigos y muestra en la consola el nombre del amigo más joven.
