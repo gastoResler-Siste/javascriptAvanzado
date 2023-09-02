@@ -32,7 +32,7 @@ function acti5(){
             mas_joven=amigo
         }
     }
-    console.log("el amigo mas joven " + mas_joven.nombre )
+    alert("el amigo mas joven " + mas_joven.nombre )
     //ordenar
     //perfil.amigos.short((a,b)=>  a.edad - b.edad);
    // console.log(perfil.amigos[0])
