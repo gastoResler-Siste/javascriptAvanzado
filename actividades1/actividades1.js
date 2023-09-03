@@ -14,6 +14,7 @@
         this.contacto.push(nuevoo)    
     }    
 }
+//xc
 function acti2(){
     contactos.nuevoContacto(prompt("nombre") ,prompt("maill"),prompt("telefono"))
     console.log (contactos.contacto.length)
