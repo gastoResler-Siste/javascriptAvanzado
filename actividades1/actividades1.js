@@ -14,7 +14,6 @@
         this.contacto.push(nuevoo)    
     }    
 }
-//xc
 function acti2(){
     contactos.nuevoContacto(prompt("nombre") ,prompt("maill"),prompt("telefono"))
     console.log (contactos.contacto.length)
@@ -26,7 +25,45 @@ function acti2(){
 
     console.log("la cantidad de Contactos es: " + contactos.contacto.length)
 }
-    
+   //actividad 3
+   
+ let productos={   
+    producto:
+        [ { nombre:"Yerba Mate andresito",
+            presentacion:"500Grs",
+            cantidad:26,
+            precio:700,
+            disponible:true,
+        }],
+        
+    nuevoArticulo: function(name,prs,price,cant){
+        let nuevoitem={
+            nombre:name,
+            presentacion:prs,
+            cantidad:cant,
+            precio:price,
+            disponible:true,
+        }
+        this.producto.push(nuevoitem)    
+    },    
+    buscarArticulo: function(name){
+
+
+    }
+}
+   
+function acti3(){
+    productos.nuevoArticulo (prompt("nombre") , prompt("Presentacion"),prompt("Precio"),prompt("cantidad"))
+    console.log (productos.producto.length)
+
+
+    console.log("la cantidad de Articulos es: " + productos.producto.length)
+
+}
+   //------------------
+
+
+
     const usuario={
         nombre:"juan carlos",
         peliculaFavorita:[
@@ -47,10 +84,6 @@ function acti2(){
 function acti1(){
     alert(usuario.nombre + '  ' + usuario.peliculaFavorita[1].titulo + ' (' + usuario.peliculaFavorita[1].año +')')
 }
-
-
-
-
 
 
 
@@ -86,4 +119,64 @@ function acti5(){
     //perfil.amigos.short((a,b)=>  a.edad - b.edad);
    // console.log(perfil.amigos[0])
 
-}//cierro la funcion
+}//cierro la funcion Acti5
+
+
+
+
+       
+let calificaciones={
+    datosAlumno:
+        [ { nombre:"JUANNN",
+        notaXmateria:[
+            {
+             materia: "Lengua",
+             nota:8
+            },
+            {
+                materia: "Historia",
+                nota:9
+               },
+               {
+                materia: "Matematica",
+                nota:3
+               }
+
+
+            ]   
+        }],
+        agregarCalificacion: function (nombreAlum,mat1,nota1,mat2,nota2,mat3,nota3){
+           let nuevaNota={
+           nombre:nombreAlum,
+           notaXmateria:[{
+             materia: mat1,
+             nota:nota1
+            },{
+            materia: mat2,
+            nota:nota2
+            },{
+            materia: mat3,
+            nota:nota3
+            }]   
+          }
+          this.datosAlumno.push(nuevaNota)
+       }
+}
+function acti4(){
+    calificaciones.agregarCalificacion("Gaston","Fisica2",3,"historia4",7,"Geografia",5)
+  calificaciones.agregarCalificacion("Beto","Fisica2",3,"historia4",7,"Geografia",5)
+calificaciones.agregarCalificacion("Humberto","historia4",7,"Fisica2",3,"Geografia",5)
+
+for (let alum of calificaciones.datosAlumno){
+   let prome=0;
+   let cantiNot=0;
+   for(let notas of alum.notaXmateria ){
+    cantiNot++
+    prome=prome+notas.nota
+   }
+   prome=prome/cantiNot
+   let cadena=alum.nombre + ' promedio: ' + prome
+   console.log (cadena)
+}
+
+}
