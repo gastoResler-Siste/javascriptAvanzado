@@ -13,3 +13,29 @@
 //productos seleccionados por el usuario. Esta clase debe incluir m�todos 
 //para agregar un producto al carrito, eliminar un producto del carrito y 
 //calcular el total de la compra.
+
+
+class produto{
+    constructor(nombre,precio,stock){
+        this.nombre=nombre;
+        this.precio=precio;
+        this.stock=stock;
+    }
+    GetInformacionProducto(){
+        return 'el producto es ' + this.nombre;
+    }
+}
+
+//crear un producto nuevo
+let prodNuevo=new produto("noretbook",150000,5)
+prodNuevo.GetInformacionProducto;
+
+class productoElectronico extends produto{
+    constructor(nombre,precio,stock,potencia){
+        super(nombre,precio,stock)
+        this.potencia=potencia;
+    }
+    getPotencia(){
+        return this.potencia
+    }
+}
