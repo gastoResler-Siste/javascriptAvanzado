@@ -180,3 +180,27 @@ for (let alum of calificaciones.datosAlumno){
 }
 
 }
+
+
+$(document).ready(function(){
+
+
+
+
+
+    $(botonGuardar).ready()
+    $(botonGuardar).click(function(){
+        //$("#nota1").val
+        let nombreAl=$("#nombre").val()
+        //alert(nombreAl);
+        if (nombreAl==''){
+            alert("esa vacio");
+            $("#nombre").css("background-color","yellow")
+            //$("#nombre").show()
+           // $("#nombre").hide()
+        }else{
+            $("#nombre").addClass("resalta")//le agregue un estilo ya definido y llamado "resala"
+            alert("sf")}
+        
+    })
+})
