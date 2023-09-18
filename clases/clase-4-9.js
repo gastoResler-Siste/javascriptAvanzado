@@ -4,7 +4,8 @@ for(let i = 0; i < numeros.length ; i++) {
   suma += numeros[i];
 */
 
-
+ //
+ 
 //reducce es una funcion de Js
 //SumAcumulativa es una variable que yo menciono para que se acumule ahi la suma del arreglo
 //elem hace referencia a los elementos del arreglo
