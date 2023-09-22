@@ -1,4 +1,4 @@
-Peliculas Favoritas:
+﻿Peliculas Favoritas:
 Crea un objeto usuario con propiedades como nombre y peliculasFavoritas, que es un array de objetos donde cada objeto representa una pel�cula con propiedades como titulo y a�o. Agrega al menos tres pel�culas favoritas y muestra en la consola el t�tulo de la segunda pel�cula favorita.
 
 Gestor de Contactos:
@@ -19,3 +19,7 @@ que es un array de n�meros.
 Red Social:
 Crea un objeto perfil que almacene propiedades como nombre, edad y amigos, que es un array de objetos donde cada objeto representa un amigo con propiedades como nombre y edad. Agrega al menos tres amigos y muestra en la consola el nombre del amigo m�s joven.
 z
+
+
+
+const maximo = arregloBaseEnteros.reduce((acc, current) => current > acc ? current : acc, 0);

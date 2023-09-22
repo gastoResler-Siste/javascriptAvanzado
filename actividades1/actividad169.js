@@ -39,3 +39,18 @@ class productoElectronico extends produto{
         return this.potencia
     }
 }
+
+let clie=[];
+//aplicable a los estudiantes y sus 3 notas
+function clientee(nombre,apellido,cuenta,deuda){
+    this.nombre=nombre;
+    this.apellido=apellido;
+    this.cuenta=cuenta;
+    this.deuda=deuda;
+}
+
+const juanPerez=new clientee("juan","pere",120,155522);
+const juanPerez1=new clientee("juaness","perezz",122,5522);
+
+clie.push (juanPerez);
+clie.push (juanPerez1);

@@ -181,12 +181,34 @@ for (let alum of calificaciones.datosAlumno){
 
 }
 
+//de una clase para poner un nombre y 3 calificaciones
+let clase={
+    estudiantes:[], //arreglo de estudiantes
+    agregarEstudiante: function (nombre,notas){
+        let nuevoEstudiante={
+            nombre:nombre,
+            calificaciones:notas,
+        };
+        this.estudiantes.push(nuevoEstudiante);
+    },
+
+}
+
+function calcularPromedios(calificaciones){
+    let sumaParcial=0;
+    let resultado=0;
+    //verifico si esta vacio
+    if (calificaciones!=undefined && calificaciones !=""){
+        for(const nottta of calificaciones){
+            sumaParcial+=nottta;
+        }
+        resultado=sumaParcial/calificaciones.length;
+    }
+    return resultado;
+}
+
 
 $(document).ready(function(){
-
-
-
-
 
     $(botonGuardar).ready()
     $(botonGuardar).click(function(){
@@ -201,6 +223,28 @@ $(document).ready(function(){
         }else{
             $("#nombre").addClass("resalta")//le agregue un estilo ya definido y llamado "resala"
             alert("sf")}
-        
+      
+            
+        let nombre=texttt_nmbre; 
+        let nota1=textNota1;   
+        let nota2=textNota2;  
+        let nota3=textNota3;  
+        clase.agregarEstudiante(nombre,[nota1,nota2,nota3]);
+
+        if(clase.estudiantes.length===3){
+            //cuando llegue a 3 registros los mostrara
+        }    
+
     })
-})
+
+    //boton VER promedios
+    //inicializo la lista
+    //listapromedios.innerHtml=""
+    for (const estudiante of clase.estudiantes){
+        let prome=calcularPromedios(estudiante.calificaciones);
+        let listItem=document.createElement("li");
+        listItem.textContent=estudiante.nombre + ": " + prome;
+    }
+
+
+})//fin $(document).ready(function(){
