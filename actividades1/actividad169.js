@@ -40,7 +40,8 @@ class productoElectronico extends produto{
     }
 }
 
-let clie=[];
+let clie=[];//defino mi arreglo
+let est=[];
 //aplicable a los estudiantes y sus 3 notas
 function clientee(nombre,apellido,cuenta,deuda){
     this.nombre=nombre;
@@ -49,8 +50,37 @@ function clientee(nombre,apellido,cuenta,deuda){
     this.deuda=deuda;
 }
 
+function estudiante(nombre,notas){
+    this.nombre=nombre;
+    this.notas=notas;
+}
+
+//video clase 4
+//https://drive.google.com/file/d/1_s3ZsbFeiE2ylpWarX5dBM0szA0bLIWc/view
 const juanPerez=new clientee("juan","pere",120,155522);
 const juanPerez1=new clientee("juaness","perezz",122,5522);
 
 clie.push (juanPerez);
 clie.push (juanPerez1);
+
+const juan =new estudiante("drio",[8,9,9])
+est.push(juan)
+
+
+
+
+//prototipos      clase5
+//////////////////////////////////////////////////
+            const animal={
+                saludar: function(){
+                    console.log("Hola, soy un animal");
+                }
+            }
+
+            /*const gato={};
+            gato.__proto__=animal;
+            gato.saludar     */
+            //o
+            const gato=Object.create(animal);
+            gato.saludar();
+/////////////////////////////////////////////////////
