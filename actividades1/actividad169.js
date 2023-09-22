@@ -14,7 +14,7 @@
 //para agregar un producto al carrito, eliminar un producto del carrito y 
 //calcular el total de la compra.
 
-
+//case 6   sabado 16/9
 class produto{
     constructor(nombre,precio,stock){
         this.nombre=nombre;
@@ -22,7 +22,7 @@ class produto{
         this.stock=stock;
     }
     GetInformacionProducto(){
-        return 'el producto es ' + this.nombre;
+       return  'el producto es ' + this.nombre
     }
 }
 
@@ -39,6 +39,9 @@ class productoElectronico extends produto{
         return this.potencia
     }
 }
+
+
+
 
 let clie=[];//defino mi arreglo
 let est=[];
