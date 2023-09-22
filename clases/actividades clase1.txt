@@ -24,3 +24,7 @@ z
 
 const maximo = arregloBaseEnteros.reduce((acc, current) => current > acc ? current : acc, 0);
 https://drive.google.com/file/d/1_s3ZsbFeiE2ylpWarX5dBM0szA0bLIWc/view
+
+
+clase 7   haciendo el carrito   lunes 18
+https://drive.google.com/file/d/159k3rQmnTefLI5kitDfYvcvKB1tqtW-r/view
