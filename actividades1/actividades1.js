@@ -248,3 +248,9 @@ $(document).ready(function(){
 
 
 })//fin $(document).ready(function(){
+//acceder a al elemento
+$("[name='elemento']").val()//selecciono el elemneto por el nombre en Jquery
+$("#telefono").val()//accedo por el id
+
+$("#contenedor").child("p").val()//todoss los parrafos dentro del contenedor
+$("#contenedor").find("p").hide()//busca todod los parrafos y los oculta
