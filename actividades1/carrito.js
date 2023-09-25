@@ -12,7 +12,7 @@ class productos{
         }
 }
 
-class ProductoElectronico extends productos{
+class productoElectronico extends productos{
     constructor(name, price,stoki,pote){
         super(name, price,stoki);
         this.potencia=pote;
@@ -62,6 +62,37 @@ const listaCarrito=new carritoCompra();
 
 function agregarAlCarrito(index){
                      // $("#producto_"+ index +" .nombre").text();
-    let productoName =$("#producto_0 .nombre").text();
-    alert(productoName);
+    let productoName =$("#producto_"+index +" .nombre").text();
+    let precioO=$("#producto_"+index +" .precio").text(); 
+    //alert(productoName + precio);
+  //if($("#producto_"+ index ).hasClass("electronico")) {
+    if ($("#producto_"+ index).hasClass("producto electronico")){
+        let poten=$("#producto_"+ index + " .potencia").text();
+        let p1 = new productoElectronico(productoName,precioO,1,poten);
+        listaCarrito.agregarProducto(p1);
+
+    }else{
+        let caducee=$("#producto_" + index + " .caducidad").text();
+        let alimPere=true;  
+        let p2= new productoAlimenticio(productoName,precioO,2,caducee,alimPere);
+        listaCarrito.agregarProducto(p2);
+        alert("nn")
+    }
+    mostrarCarro();
+}
+
+function mostrarCarro(){
+    const listaCarrritoUl=$("#lista-carrito");
+    const totalSpan=$("#total");
+    listaCarrritoUl.empty();//esto limpia la Ul
+
+    //listaCarrito nuevo objeto de la clase CarritoProducto
+            //listaProducto variable del constructor de la clase carritoproducto
+                      //prodLisCarro nombre que uso para mencionar a cada item de la listaProducto
+            listaCarrito.listaProducto.forEach((prodLisCarro,index)=>{
+
+       alert( prodLisCarro.getInformacionProducto());
+
+    });//fin For EACH
+
 }
