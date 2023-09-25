@@ -90,7 +90,7 @@ function mostrarCarro(){
             //listaProducto variable del constructor de la clase carritoproducto
                       //prodLisCarro nombre que uso para mencionar a cada item de la listaProducto
     listaCarrito.listaProducto.forEach((prodLisCarro,index)=>{
-        const lii=$("<li>").text(prodLisCarro.getInformacionProducto());
+        const lii=$("<li id='lili'>").text(prodLisCarro.getInformacionProducto());
        const elimarBtn=$("<button>").text("Eliminar Articulo");
         elimarBtn.click(()=>eliminarDelCarrito(index));
 
@@ -121,7 +121,9 @@ $(document).ready(function(){
     $("#lista-carrito").click(function(){
        // $(this).addClass("resaltado").siblings().removeClass("resaltado");
     })
-
+    $("#lista-carrito").on("click","#li",function(){
+         $(this).addClass("resaltado").siblings().removeClass("resaltado");
+     })
    // $("#lista-carrito").click(function(){
    //     $("#lista-carrito").removeclass("resaltado");
     //    this.addClass("resaltado");
