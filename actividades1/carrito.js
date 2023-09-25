@@ -76,7 +76,7 @@ function agregarAlCarrito(index){
         let alimPere=true;  
         let p2= new productoAlimenticio(productoName,precioO,2,caducee,alimPere);
         listaCarrito.agregarProducto(p2);
-        alert("nn")
+       
     }
     mostrarCarro();
 }
@@ -108,3 +108,22 @@ function eliminarDelCarrito(index) {
     
     mostrarCarro();
 }
+
+$(document).ready(function(){
+       
+    $("#lista-carrito li").click(function(){
+        $(this).addClass("resaltado").siblings().removeClass("resaltado");
+    })
+    
+
+
+
+    $("#lista-carrito").click(function(){
+       // $(this).addClass("resaltado").siblings().removeClass("resaltado");
+    })
+
+   // $("#lista-carrito").click(function(){
+   //     $("#lista-carrito").removeclass("resaltado");
+    //    this.addClass("resaltado");
+    //})
+})

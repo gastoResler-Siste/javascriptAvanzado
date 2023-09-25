@@ -12,7 +12,9 @@
         <style>
             *{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             }
-            
+            .resaltado{
+                background-color: aqua;
+            }
             .imag{
                 height: 100px; width: 100px;
             }
@@ -40,36 +42,50 @@
             </div>
         </div>   
          
-         <div>
+        <div style="display: block; width: 100%;height: 50px; border: black 1px solid;margin-top: 30px; ">
            <br>
            <h1>Tienda de Productos</h1>
-           <div id="productos" >
+           <div id="productos"  style=" width: 100%; display:block ; border: black 0px solid">
                <!-- Aquí se mostrarán los productos en imágenes -->
-               <div class="producto electronico" id="producto_0" name="divi">gjhg
+               <div style="float: left; width: 25%; border: black 0px solid" class="producto electronico" id="producto_0" name="divi">
                    <img  class="imag" src="laptop.jpg" alt="Laptop">
                    <p class="nombre">Laptop</p>
                    <p class="precio">1000</p>
                    <p class="potencia">Potencia: 500W</p>
                    <button name="producto_0" onclick="agregarAlCarrito(0)">Agregar al carrito</button>
                </div>
-               <div class="producto alimenticio" id="producto_1">
+               <div style="float: left; width: 24%; border: black 0px solid" class="producto electronico" id="producto_2" name="divi">
+                    <img  class="imag" src="laptop.jpg" alt="Laptop">
+                    <p class="nombre">Laptop hp</p>
+                    <p class="precio">1030</p>
+                    <p class="potencia">Potencia: 500W</p>
+                    <button name="producto_0" onclick="agregarAlCarrito(2)">Agregar al carrito</button>
+              </div>
+               <div style="float: right; width: 24%; border: black 0px solid" class="producto alimenticio" id="producto_1">
                    <img src="manzanas.jpeg" alt="Manzanas" style="height: 100px; width: 100px;">
                    <p class="nombre">Manzanas</p>
                    <p class="precio">2</p>
                    <p class="caducidad">Fecha de Caducidad: 01/10/2023</p>
                    <button name="producto_1" onclick="agregarAlCarrito(1)">Agregar al carrito</button>
                </div>
+               <div style="float: left; width:24%; border: black 0px solid" class="producto electronico" id="producto_3" name="divi">
+                    <img  class="imag" src="laptop.jpg" alt="Laptop">
+                    <p class="nombre">Laptop  4</p>
+                    <p class="precio">5000</p>
+                    <p class="potencia">Potencia: 5500W</p>
+                    <button name="producto_0" onclick="agregarAlCarrito(3)">Agregar al carrito</button>
+                </div>
                <!-- Agregar más productos aquí -->
            </div>
           <!--  <hr style="width: 88%;">-->
           <div id="carrito">
             <h2>Carrito de Compras</h2>
             <ul id="lista-carrito">
-                <!-- Aquí se mostrarán los productos en el carrito -->
+               <li> </li> <!-- Aquí se mostrarán los productos en el carrito -->
             </ul>
             <p id="cantidad"></p>
 
-        </div>
+            </div>
         </div>
        
     </body>
