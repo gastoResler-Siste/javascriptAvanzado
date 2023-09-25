@@ -48,12 +48,12 @@ class carritoCompra {
     agregarProducto(prod){
         this.listaProducto.push(prod);
     }
-    eliminaProducto(indice){
-        this.listaProducto.splice(indice,1);
+    eliminaProducto(indec){
+        this.listaProducto.splice(indec,1);
     }
     calcularTotal(){
         let tota=0;
-        tota=this.listaProducto.reduce((sumar,elem)=>sumar+elem.precio,0)
+        tota=this.listaProducto.reduce((sumar,elem)=>parseFloat( sumar) + parseFloat( elem.precio),0)
         return tota;
     }
 }
@@ -89,10 +89,22 @@ function mostrarCarro(){
     //listaCarrito nuevo objeto de la clase CarritoProducto
             //listaProducto variable del constructor de la clase carritoproducto
                       //prodLisCarro nombre que uso para mencionar a cada item de la listaProducto
-            listaCarrito.listaProducto.forEach((prodLisCarro,index)=>{
+    listaCarrito.listaProducto.forEach((prodLisCarro,index)=>{
+        const lii=$("<li>").text(prodLisCarro.getInformacionProducto());
+       const elimarBtn=$("<button>").text("Eliminar Articulo");
+        elimarBtn.click(()=>eliminarDelCarrito(index));
 
-       alert( prodLisCarro.getInformacionProducto());
-
+        lii.append(elimarBtn);
+        listaCarrritoUl.append(lii);
     });//fin For EACH
 
+    $("#cantidad").html("cantidad de productos: + " + listaCarrito.listaProducto.length + " total: "  + listaCarrito.calcularTotal());
+   
+    $("#cantidad").append("<p> Total</p>")
+}   
+
+function eliminarDelCarrito(index) {
+    listaCarrito.eliminaProducto(index);
+    
+    mostrarCarro();
 }
