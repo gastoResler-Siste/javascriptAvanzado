@@ -11,8 +11,11 @@
         <link rel="shortcut icon" href="icon.png">
         <style>
             *{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            };
-
+            }
+            
+            .imag{
+                height: 100px; width: 100px;
+            }
             
         </style>
     </head>
@@ -39,18 +42,21 @@
          
          <div>
            <br>
-           <h1>Tienda de Productos</h1>
-            <div id="productos">
+           
+          <!--  <hr style="width: 88%;">-->
+        </div>
+        <h1>Tienda de Productos</h1>
+            <div id="productos" >
                 <!-- Aquí se mostrarán los productos en imágenes -->
-                <div class="producto electronico" id="producto_0">
-                    <img src="laptop.jpg" alt="Laptop">
+                <div class="producto electronico" id="producto_0" name="divi">gjhg
+                    <img  class="imag" src="laptop.jpg" alt="Laptop">
                     <p class="nombre">Laptop</p>
                     <p class="precio">$1000</p>
                     <p class="potencia">Potencia: 500W</p>
                     <button name="producto_0" onclick="agregarAlCarrito(0)">Agregar al carrito</button>
                 </div>
                 <div class="producto alimenticio" id="producto_1">
-                    <img src="manzanas.jpeg" alt="Manzanas">
+                    <img src="manzanas.jpeg" alt="Manzanas" style="height: 100px; width: 100px;">
                     <p class="nombre">Manzanas</p>
                     <p class="precio">$2</p>
                     <p class="caducidad">Fecha de Caducidad: 01/10/2023</p>
@@ -58,9 +64,6 @@
                 </div>
                 <!-- Agregar más productos aquí -->
             </div>
-          <!--  <hr style="width: 88%;">-->
-        </div>
-        
     </body>
     <footer >
 

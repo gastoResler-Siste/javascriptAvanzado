@@ -57,3 +57,11 @@ class carritoCompra {
         return tota;
     }
 }
+
+const listaCarrito=new carritoCompra();
+
+function agregarAlCarrito(index){
+                     // $("#producto_"+ index +" .nombre").text();
+    let productoName =$("#producto_0 .nombre").text();
+    alert(productoName);
+}

@@ -251,6 +251,8 @@ $(document).ready(function(){
 //acceder a al elemento
 $("[name='elemento']").val()//selecciono el elemneto por el nombre en Jquery
 $("#telefono").val()//accedo por el id
+//produto_0 es el id del Div  + (esoacio) y '.nombre' es la clase del parrafo dentro
+$("#producto_0 .nombre").text();// accedo al parrrafo dentro del Div
 
 $("#contenedor").child("p").val()//todoss los parrafos dentro del contenedor
 $("#contenedor").find("p").hide()//busca todod los parrafos y los oculta
