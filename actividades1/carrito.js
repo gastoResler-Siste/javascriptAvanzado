@@ -90,7 +90,7 @@ function mostrarCarro(){
             //listaProducto variable del constructor de la clase carritoproducto
                       //prodLisCarro nombre que uso para mencionar a cada item de la listaProducto
     listaCarrito.listaProducto.forEach((prodLisCarro,index)=>{
-        const lii=$("<li id='lili'>").text(prodLisCarro.getInformacionProducto());
+        const lii=$("<li id='" + index + "' title='produtooo'>").text(prodLisCarro.getInformacionProducto());
        const elimarBtn=$("<button>").text("Eliminar Articulo");
         elimarBtn.click(()=>eliminarDelCarrito(index));
 
@@ -111,9 +111,9 @@ function eliminarDelCarrito(index) {
 
 $(document).ready(function(){
        
-    $("#lista-carrito li").click(function(){
-        $(this).addClass("resaltado").siblings().removeClass("resaltado");
-    })
+   // $("#lista-carrito li").click(function(){
+   //     $(this).addClass("resaltado").siblings().removeClass("resaltado");
+   // })
     
 
 
@@ -121,11 +121,15 @@ $(document).ready(function(){
     $("#lista-carrito").click(function(){
        // $(this).addClass("resaltado").siblings().removeClass("resaltado");
     })
-    $("#lista-carrito").on("click","#li",function(){
+    $("#lista-carrito").on("click","li",function(e){
          $(this).addClass("resaltado").siblings().removeClass("resaltado");
+        // alert( $(this).text() +  $(this).attr("id") );
+        let ide= $(this).attr("id") ;
+        alert( $("#" + ide + "").attr("title"))
+                
      })
-   // $("#lista-carrito").click(function(){
-   //     $("#lista-carrito").removeclass("resaltado");
-    //    this.addClass("resaltado");
+     //tambien anda con el ID
+    // $("#lista-carrito").on("click","#lili",function(){
+      //  $(this).addClass("resaltado").siblings().removeClass("resaltado");
     //})
 })
